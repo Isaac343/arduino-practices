@@ -8,10 +8,8 @@ void loop() {
     analogWrite(12, i);
     delay(10);
   }
-for (int a = 0; a <= 255; a--){
-    int i = 255;
-    int b = i -a;
-    analogWrite(12, b);
+for (int i = 255; i >= 0; i--){
+    analogWrite(12, i);
     delay(10);
     
   }
