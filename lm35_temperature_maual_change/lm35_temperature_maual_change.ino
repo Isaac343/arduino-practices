@@ -14,8 +14,10 @@ void setup() {
 
 void loop() {
   rawval = analogRead(A0);
+  delay(10);  
   ref = analogRead(A2);
-  ref2 = (ref *60.0)/1023.0;
+  delay(10);
+  ref2 = (ref * 60.0)/1023.0;
   
   firsttemp = (rawval * 500.0)/1023.0;
   temp = firsttemp - 20.0;
