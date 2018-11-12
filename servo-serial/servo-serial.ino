@@ -17,13 +17,9 @@ void loop() {
       Serial.println(entry);
       }
     else{
-      //angle = (entry*255)/180;
       servo_one.write(entry);
       Serial.println(entry);
       }
-    
     delay(10);
     }
-  
-  
 }
