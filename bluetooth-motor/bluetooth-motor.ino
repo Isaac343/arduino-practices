@@ -5,6 +5,7 @@ char dato=0;
 void setup() {
   bt_one.begin(38400); //valor de comunicación bluetooth
   pinMode(led, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -17,18 +18,15 @@ void loop() {
       digitalWrite(8, LOW);
       delay(50);
     }
-
     if(dato=='2'){
       delay(50);
       digitalWrite(9, LOW);
       digitalWrite(8, HIGH);
       delay(50);
-      }
+    }
     if(dato=='0'){
       digitalWrite(9, LOW);
       digitalWrite(8, LOW);
-      }
-    
+    }
   }
-  dato='0';
 }
