@@ -15,24 +15,24 @@ void loop() {
   if(bt_one.available()){
     dato = bt_one.read();
     Serial.println(dato);
-    if(dato=='0'){
+    if(dato=='s'){
       servo_one.write(90);
       servo_two.write(90);
       delay(10);
-      }
-    if(dato=='3'){
-      for(int i=90; i=180; i++){
-        servo_one.write(i);
-        servo_two.write(i);
-        delay(10);
-        }
     }
-    if(dato=='4'){
-      for(int i=90; i=0; i--){
-        servo_one.write(i);
-        servo_two.write(i);
-        }
-      }
+    if(dato=='r'){
+      //for(int i=90; i=150; i++){
+        servo_one.write(140);
+        servo_two.write(140);
+       //}
+    }
+    if(dato=='l'){
+      //for(int i=90; i=30; i--){
+        servo_one.write(40);
+        servo_two.write(40);
+        //delay(100);
+      //}
+    }
   }
   
 }
