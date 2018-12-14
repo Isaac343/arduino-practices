@@ -1,6 +1,5 @@
 #include <Servo.h>
 
-int angle;
 int entry;
 Servo servo_one;
 
@@ -10,16 +9,9 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available() >0){
+  if (Serial.available() > 0){
     entry = Serial.parseInt();
-    if(entry > 180){
-      servo_one.write(180);
-      Serial.println(entry);
-      }
-    else{
       servo_one.write(entry);
       Serial.println(entry);
-      }
-    delay(10);
-    }
+  }
 }

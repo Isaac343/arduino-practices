@@ -1,16 +1,18 @@
 #include <SoftwareSerial.h>
-SoftwareSerial Wi_Serial(9, 10); // RX, TX
+SoftwareSerial WI1(3,2); // RX, TX
+String W="";
+char w;
  
 void setup(){
    Serial.begin(9600);
-   Wi_Serial.begin(9600);
+   WI1.begin(9600);
+   pinMode(13, OUTPUT);
 }
 
 void loop(){
-   if (Wi_Serial.available()){
-      Serial.write(Wi_Serial.read());
-   }
-   if (Serial.available()){
-      Wi_Serial.write(Serial.read());
-   }
+   if(WI1.available()){
+    w=WI1.read();
+    Serial.print(w);
+    W 
+    }
 }
